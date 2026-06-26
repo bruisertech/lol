@@ -81,7 +81,7 @@ const Widget2 = () => {
                   </p>
                 </div>
                 <div className="lg:w-1/2 flex justify-center mt-8 lg:mt-0">
-                  <img src="/images/widget_2.1.png" alt="Coberturas" className="max-w-full h-auto object-contain invert-safe" />
+                  <img src="./images/widget_2.1.png" alt="Coberturas" className="max-w-full h-auto object-contain invert-safe" />
                 </div>
               </div>
             )}
@@ -97,7 +97,7 @@ const Widget2 = () => {
                   </p>
                 </div>
                 <div className="lg:w-1/2 flex justify-center mt-8 lg:mt-0">
-                  <img src="/images/car_icon.png" alt="Qué no cubre" className="max-w-full h-auto object-contain invert-safe" />
+                  <img src="./images/car_icon.png" alt="Qué no cubre" className="max-w-full h-auto object-contain invert-safe" />
                 </div>
               </div>
             )}
@@ -113,7 +113,7 @@ const Widget2 = () => {
                    </p>
                 </div>
                 <div className="lg:w-1/2 flex justify-center mt-8 lg:mt-0">
-                  <img src="/images/price_icon.png" alt="Tarifas" className="max-w-full h-auto object-contain invert-safe" />
+                  <img src="./images/price_icon.png" alt="Tarifas" className="max-w-full h-auto object-contain invert-safe" />
                 </div>
               </div>
             )}
@@ -129,7 +129,7 @@ const Widget2 = () => {
                    </p>
                 </div>
                 <div className="lg:w-1/2 flex justify-center mt-8 lg:mt-0">
-                   <img src="/images/discount_icon.png" alt="Descuento" className="max-w-full h-auto object-contain invert-safe" />
+                   <img src="./images/discount_icon.png" alt="Descuento" className="max-w-full h-auto object-contain invert-safe" />
                 </div>
               </div>
             )}

@@ -6,7 +6,7 @@ const Header = () => {
       {/* Top Header */}
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="flex items-center">
-          <img src="/images/logo.png" alt="Logo" className="h-12 invert-safe" />
+          <img src="./images/logo.png" alt="Logo" className="h-12 invert-safe" />
         </div>
         <nav className="hidden md:flex space-x-6 items-center text-sm font-semibold text-gray-700">
           <a href="#" className="hover:text-blue-700">Personas</a>

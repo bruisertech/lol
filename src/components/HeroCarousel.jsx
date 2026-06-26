@@ -18,13 +18,13 @@ const HeroCarousel = () => {
         className="w-full h-[300px] md:h-[500px]"
       >
         <SwiperSlide>
-          <img src="/images/hero_slide_1.png" alt="Hero 1" className="w-full h-full object-cover invert-safe" />
+          <img src="./images/hero_slide_1.png" alt="Hero 1" className="w-full h-full object-cover invert-safe" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/images/hero_slide_2.png" alt="Hero 2" className="w-full h-full object-cover invert-safe" />
+          <img src="./images/hero_slide_2.png" alt="Hero 2" className="w-full h-full object-cover invert-safe" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/images/hero_slide_3.png" alt="Hero 3" className="w-full h-full object-cover invert-safe" />
+          <img src="./images/hero_slide_3.png" alt="Hero 3" className="w-full h-full object-cover invert-safe" />
         </SwiperSlide>
       </Swiper>
     </div>

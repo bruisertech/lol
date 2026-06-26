@@ -4,7 +4,7 @@ name: Deploy static content to Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
+    branches: ["implement-landing-page-15029439286242228637"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:

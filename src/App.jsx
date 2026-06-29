@@ -3,6 +3,7 @@ import { HashRouter } from 'react-router-dom';
 import Hero from './components/Hero';
 import DashboardMockup from './components/DashboardMockup';
 import Profiles from './components/Profiles';
+import ClientPanel from './components/ClientPanel';
 import Pricing from './components/Pricing';
 
 function Header() {
@@ -17,6 +18,7 @@ function Header() {
           <a href="#hero" className="text-sm font-medium text-gray-300 hover:text-cyan-neon transition-colors">Inicio</a>
           <a href="#dashboard" className="text-sm font-medium text-gray-300 hover:text-cyan-neon transition-colors">Simulación</a>
           <a href="#profiles" className="text-sm font-medium text-gray-300 hover:text-cyan-neon transition-colors">Perfiles</a>
+          <a href="#simulator" className="text-sm font-medium text-gray-300 hover:text-cyan-neon transition-colors">Panel Cliente</a>
           <a href="#pricing" className="text-sm font-medium text-gray-300 hover:text-gold transition-colors">Tokens</a>
         </nav>
         <a href="#pricing" className="md:hidden px-4 py-2 bg-gold text-obsidian font-bold rounded-full text-sm">
@@ -52,6 +54,7 @@ function App() {
           <Hero />
           <DashboardMockup />
           <Profiles />
+          <ClientPanel />
           <Pricing />
         </main>
 

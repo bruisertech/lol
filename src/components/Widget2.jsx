@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { X } from 'lucide-react';
 
 const Widget2 = () => {
   const [activeTab, setActiveTab] = useState('coberturas');
@@ -27,8 +28,8 @@ const Widget2 = () => {
               onClick={() => setActiveTab('no_cubre')}
               className={`p-4 rounded-lg flex items-center shadow-sm transition-colors border-2 ${activeTab === 'no_cubre' ? 'bg-white border-[#000066] text-[#000066]' : 'bg-white border-transparent text-[#000066] hover:border-gray-200'}`}
             >
-              <div className="w-10 h-10 mr-4 flex items-center justify-center bg-green-500 rounded-full text-white">
-                 <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <div className="w-10 h-10 mr-4 flex items-center justify-center bg-blue-50 rounded-full text-[#000066]">
+                 <X size={20} strokeWidth={3} />
               </div>
               <span className="font-bold text-lg">¿Qué NO cubre?</span>
             </button>

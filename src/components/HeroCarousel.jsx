@@ -13,7 +13,7 @@ const HeroCarousel = () => {
         slidesPerView={1}
         pagination={{ clickable: true }}
         autoplay={{ delay: 5000, disableOnInteraction: false }}
-        className="w-full h-[300px] md:h-[450px]"
+        className="w-full h-[400px] md:h-[450px]"
       >
         <SwiperSlide>
           <div className="flex flex-col h-full w-full">

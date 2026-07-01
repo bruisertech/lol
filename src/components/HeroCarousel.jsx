@@ -13,14 +13,14 @@ const HeroCarousel = () => {
         slidesPerView={1}
         pagination={{ clickable: true }}
         autoplay={{ delay: 5000, disableOnInteraction: false }}
-        className="w-full h-auto md:h-[450px]"
+        className="w-full h-[300px] md:h-[450px]"
       >
         <SwiperSlide>
           <div className="flex flex-col h-full w-full">
-            <a href="https://clientes.axacolpatria.co/descargar-soat" target="_blank" rel="noopener noreferrer" className="block w-full md:h-full relative overflow-hidden flex justify-center items-center">
+            <a href="https://clientes.axacolpatria.co/descargar-soat" target="_blank" rel="noopener noreferrer" className="block w-full h-full relative overflow-hidden flex justify-center items-center">
               <picture>
                 <source media="(max-width: 767px)" srcSet="./images/banner-mobile-descarga-soat.webp" />
-                <img src="./images/hero_slide_1.png" alt="Descarga tu SOAT fácil y rápido" className="w-full max-w-[1200px] h-auto object-contain invert-safe" />
+                <img src="./images/hero_slide_1.png" alt="Descarga tu SOAT fácil y rápido" className="w-full h-full object-cover invert-safe md:scale-[1.05] md:translate-y-[2%]" />
               </picture>
             </a>
             <div className="flex flex-col items-center justify-center p-6 text-center md:hidden bg-white">
@@ -41,10 +41,10 @@ const HeroCarousel = () => {
 
         <SwiperSlide>
           <div className="flex flex-col h-full w-full">
-            <div className="block w-full md:h-full relative overflow-hidden flex justify-center items-center">
+            <div className="block w-full h-full relative overflow-hidden flex justify-center items-center">
               <picture>
                 <source media="(max-width: 767px)" srcSet="./images/banner-responsive-soat.jpg" />
-                <img src="./images/hero_slide_2.png" alt="SOAT" className="w-full max-w-[1200px] h-auto object-contain invert-safe" />
+                <img src="./images/hero_slide_2.png" alt="SOAT" className="w-full h-full object-cover invert-safe md:scale-[1.05] md:translate-y-[2%]" />
               </picture>
             </div>
             <div className="flex flex-col items-center justify-center p-6 text-center md:hidden bg-white">
@@ -55,10 +55,10 @@ const HeroCarousel = () => {
 
         <SwiperSlide>
           <div className="flex flex-col h-full w-full">
-            <div className="block w-full md:h-full relative overflow-hidden flex justify-center items-center">
+            <div className="block w-full h-full relative overflow-hidden flex justify-center items-center">
               <picture>
                 <source media="(max-width: 767px)" srcSet="./images/banner-mobile-siniestros-soat.webp" />
-                <img src="./images/hero_slide_3.png" alt="Radica tu solicitud de indemnización SOAT" className="w-full max-w-[1200px] h-auto object-contain invert-safe" />
+                <img src="./images/hero_slide_3.png" alt="Radica tu solicitud de indemnización SOAT" className="w-full h-full object-cover invert-safe md:scale-[1.05] md:translate-y-[2%]" />
               </picture>
             </div>
             <div className="flex flex-col items-center justify-center p-6 text-center md:hidden bg-white">

@@ -82,7 +82,7 @@ const Widget2 = () => {
                   </p>
                 </div>
                 <div className="lg:w-1/2 flex justify-center mt-8 lg:mt-0">
-                  <img src="./images/widget_2.1.png" alt="Coberturas" className="max-w-full h-auto object-contain invert-safe" />
+                  <img src="./images/coberturas.png" alt="Coberturas" className="max-w-full h-auto max-h-[300px] object-contain invert-safe" />
                 </div>
               </div>
             )}
@@ -98,7 +98,7 @@ const Widget2 = () => {
                   </p>
                 </div>
                 <div className="lg:w-1/2 flex justify-center mt-8 lg:mt-0">
-                  <img src="./images/car_icon.png" alt="Qué no cubre" className="max-w-full h-auto object-contain invert-safe" />
+                  <img src="./images/quenocubre.png" alt="Qué no cubre" className="max-w-full h-auto max-h-[300px] object-contain invert-safe" />
                 </div>
               </div>
             )}
@@ -109,12 +109,12 @@ const Widget2 = () => {
                    <p className="text-gray-700 mb-6 text-lg">
                      Las tarifas del SOAT están reguladas por la Superintendencia Financiera de Colombia. El valor depende del tipo de vehículo, su cilindraje, modelo y capacidad de pasajeros.
                    </p>
-                   <p className="mt-8 text-sm text-blue-700 font-semibold cursor-pointer hover:underline">
+                   <a href="https://rb.gy/b5596c" target="_blank" rel="noopener noreferrer" className="mt-8 text-sm text-blue-700 font-semibold cursor-pointer hover:underline inline-block">
                      Consulta aquí el simulador de tarifas vigente.
-                   </p>
+                   </a>
                 </div>
                 <div className="lg:w-1/2 flex justify-center mt-8 lg:mt-0">
-                  <img src="./images/price_icon.png" alt="Tarifas" className="max-w-full h-auto object-contain invert-safe" />
+                  <img src="./images/tarifas.png" alt="Tarifas" className="max-w-full h-auto max-h-[300px] object-contain invert-safe" />
                 </div>
               </div>
             )}

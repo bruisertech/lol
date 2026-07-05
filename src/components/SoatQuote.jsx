@@ -99,10 +99,10 @@ const SoatQuote = () => {
          throw new Error("Vehicle not found");
       }
 
-      const year = vehicleData.RegistrationYear;
-      const make = vehicleData.CarMake.CurrentTextValue;
-      const model = vehicleData.CarModel.CurrentTextValue;
-      const cc = vehicleData.EngineSize.CurrentTextValue;
+      const year = vehicleData.RegistrationYear || 'Desconocido';
+      const make = vehicleData.CarMake?.CurrentTextValue || vehicleData.CarMake || 'No especificada';
+      const model = vehicleData.CarModel?.CurrentTextValue || vehicleData.CarModel || 'No especificado';
+      const cc = vehicleData.EngineSize?.CurrentTextValue || vehicleData.EngineSize || 'Desconocido';
       const type = vehicleData.VehicleType || vehicleData.Description || '';
 
       const basePrice = calculateTariff(type, cc, year);

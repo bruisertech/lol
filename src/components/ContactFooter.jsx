@@ -78,11 +78,9 @@ const ContactFooter = () => {
       <footer className="bg-[#4C7BB8] text-white pt-12 pb-6 px-4 md:px-8 border-t border-[#4C7BB8]">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8 relative">
 
-          {/* Vertical Logo Placeholder */}
+          {/* Vertical Logo Superintendencia Financiera */}
           <div className="hidden md:flex flex-col items-center justify-start w-16 border-r border-white/20 pr-4 mr-4">
-             <div className="h-64 w-8 bg-white/20 border border-white/40 flex items-center justify-center text-xs text-center transform -rotate-180" style={{ writingMode: 'vertical-rl' }}>
-               VIGILADO SUPERINTENDENCIA FINANCIERA (Placeholder)
-             </div>
+             <img src="./images/superfinanciera.png" alt="Vigilado Superintendencia Financiera de Colombia" className="w-8 h-auto object-contain" />
           </div>
 
           <div className="flex-1">
@@ -142,11 +140,9 @@ const ContactFooter = () => {
             {/* Footer Bottom */}
             <div className="flex flex-col md:flex-row items-center justify-between border-t border-white/20 pt-8 pb-4">
 
-              {/* Horizontal Logo Placeholder */}
+              {/* Horizontal Logo Supersalud */}
               <div className="mb-6 md:mb-0">
-                <div className="w-48 h-12 bg-white/20 border border-white/40 flex items-center justify-center text-sm">
-                   VIGILADO SUPERSALUD (Placeholder)
-                </div>
+                <img src="./images/supersalud.png" alt="Vigilado Supersalud" className="w-48 h-auto object-contain" />
               </div>
 
               {/* Social Media */}

@@ -8,6 +8,7 @@ const SoatQuote = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [result, setResult] = useState(null);
+  const [isProcessingPayment, setIsProcessingPayment] = useState(false);
 
   // Formatter for currency
   const formatCurrency = (value) => {
@@ -130,6 +131,43 @@ const SoatQuote = () => {
       setError("No pudimos recuperar la información. Verifica la placa o intenta más tarde comunícate al 3004444444");
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handlePayment = async () => {
+    if (!result) return;
+    setIsProcessingPayment(true);
+
+    try {
+      // In production (hosting), the file will be in the same folder
+      // For local testing in Vite, it might not work unless we use a mock or standard fetch
+      const response = await fetch('./create_preference.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          price: result.finalPrice,
+          placa: placa,
+          cedula: cedula
+        })
+      });
+
+      const data = await response.json();
+
+      if (data.success && data.init_point) {
+        // Redirigir al usuario a Mercado Pago
+        window.location.href = data.init_point;
+      } else {
+        throw new Error(data.error || 'No se pudo generar el pago');
+      }
+    } catch (err) {
+      console.error("Error al procesar el pago:", err);
+      // Fallback para cuando estamos probando localmente y PHP no funciona,
+      // o si hay un error en el servidor.
+      alert('Error de conexión con la pasarela. Si estás en localhost sin PHP, esto es normal. En tu hosting public_html funcionará (recuerda poner tu token).');
+    } finally {
+      setIsProcessingPayment(false);
     }
   };
 
@@ -258,8 +296,19 @@ const SoatQuote = () => {
                      {formatCurrency(result.finalPrice)}
                    </p>
 
-                   <button className="mt-6 bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full w-full transition-colors">
-                      Continuar al Pago
+                   <button
+                     onClick={handlePayment}
+                     disabled={isProcessingPayment}
+                     className="mt-6 bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full w-full transition-colors flex justify-center items-center disabled:opacity-70 disabled:cursor-not-allowed"
+                   >
+                     {isProcessingPayment ? (
+                       <>
+                         <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-3"></div>
+                         Procesando...
+                       </>
+                     ) : (
+                       "Continuar al Pago"
+                     )}
                    </button>
                 </div>
 

@@ -159,13 +159,12 @@ const SoatQuote = () => {
         // Redirigir al usuario a Mercado Pago
         window.location.href = data.init_point;
       } else {
-        throw new Error(data.error || 'No se pudo generar el pago');
+        const errorMsg = data.error ? data.error + (data.details ? ' - ' + JSON.stringify(data.details) : '') : 'No se pudo generar el pago';
+        throw new Error(errorMsg);
       }
     } catch (err) {
       console.error("Error al procesar el pago:", err);
-      // Fallback para cuando estamos probando localmente y PHP no funciona,
-      // o si hay un error en el servidor.
-      alert('Error de conexión con la pasarela. Si estás en localhost sin PHP, esto es normal. En tu hosting public_html funcionará (recuerda poner tu token).');
+      alert(`Error con la pasarela de pago: ${err.message}. Por favor verifica que el Access Token esté configurado correctamente en create_preference.php y que la cuenta de Mercado Pago tenga permisos.`);
     } finally {
       setIsProcessingPayment(false);
     }

@@ -48,8 +48,7 @@ $preferenceData = [
     //     "success" => "https://tusitio.com/exito", // A donde va si paga
     //     "failure" => "https://tusitio.com/fallo",  // A donde va si falla
     //     "pending" => "https://tusitio.com/pendiente"
-    // ],
-    "auto_return" => "approved",
+    // ]
 ];
 
 // 3. Enviamos la petición a la API de Mercado Pago usando cURL
